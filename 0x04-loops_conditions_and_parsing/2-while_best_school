@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+
+
+Figure=0
+
+while [ $Figure -lt 10 ]
+do
+echo "Best School"
+((Figure++))
+done
