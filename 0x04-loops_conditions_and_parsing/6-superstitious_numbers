@@ -10,10 +10,10 @@ case $Figure in
 echo "bad luck from China"
 ;;
 9)
-echo " bad luck from Japan"
+echo "bad luck from Japan"
 ;;
 17)
-echo " bad luck from Italy"
+echo "bad luck from Italy"
 ;;
 esac
 ((Figure++))
