@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+Figure=1
+
+while [ $Figure -le 20 ]
+do
+case $Figure in
+4)
+echo "bad luck from China"
+;;
+9)
+echo " bad luck from Japan"
+;;
+17)
+echo " bad luck from Italy"
+;;
+*)
+echo $Figure
+;;
+esac
+Figure=$((Figure+1))
+done
