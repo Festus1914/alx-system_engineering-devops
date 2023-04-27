@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#Writing a Bash Script that:
+
+Figure=1
+
+while [ $Figure -le 10 ]
+do
+if [ $Figure -eq 3 ]
+then
+echo "Best School"
+echo "bad luck"
+elif [ $Figure -eq 7 ]
+then
+echo "good luck"
+else
+echo "Best School"
+fi
+((Figure++))
+done
