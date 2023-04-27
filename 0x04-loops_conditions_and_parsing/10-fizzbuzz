@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#fizzbuzz problem
+
+
+Figure=0
+while [ $((Figure++)) -lt 100 ]; do
+if [ $((Figure % 15)) -eq 0 ]; then
+echo "FizzBuzz"
+elif [ $((Figure % 5)) -eq 0 ]; then
+echo "Buzz"
+elif [ $((Figure % 3)) -eq 0 ]; then
+echo "Fizz"
+else
+echo $Figure
+fi
+done
+
