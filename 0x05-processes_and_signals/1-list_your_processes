@@ -4,4 +4,4 @@
 #Show process hierarchy
 
 
-ps -auxf
+ps aux
