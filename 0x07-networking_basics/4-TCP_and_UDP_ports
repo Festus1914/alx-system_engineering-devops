@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Displays listening ports. Includes listening socket too
+# + as the PID and name of the program to which each socket belong.
+
+netstat -1 --program
