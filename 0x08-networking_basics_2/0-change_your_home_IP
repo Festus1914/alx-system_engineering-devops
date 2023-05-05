@@ -11,4 +11,3 @@ echo "server=/facebook.com/8.8.8.8" | sudo tee /etc/dnsmasq.d/facebook.conf
 
 # Restart dnsmasq service
 sudo systemctl restart dnsmasq.service
-fi
