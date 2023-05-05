@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
-# Configures an Ubuntu server as follows:
-#   - localhost resolves to 127.0.0.2
-#   - facebook.com resolves to 8.8.8.8
+# Update package list
+sudo apt-get update
 
+# Install necessary packages
+sudo apt-get install -y dnsmasq
+
+# Configure dnsmasq
 echo "address=/localhost/127.0.0.2" | sudo tee /etc/dnsmasq.d/localhost.conf
 echo "server=/facebook.com/8.8.8.8" | sudo tee /etc/dnsmasq.d/facebook.conf
 
-if [ -f /.dockerenv ]; then
-	echo '{"dns": ["127.0.0.1"]}' | sudo tee /etc/docker/daemon.json
+# Restart dnsmasq service
+sudo systemctl restart dnsmasq.service
