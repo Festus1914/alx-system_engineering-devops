@@ -6,4 +6,5 @@
 echo "address=/localhost/127.0.0.2" | sudo tee /etc/dnsmasq.d/localhost.conf
 echo "server=/facebook.com/8.8.8.8" | sudo tee /etc/dnsmasq.d/facebook.conf
 
-sudo systemctl restart dnsmasq.service
+if [ -f /.dockerenv ]; then
+	echo '{"dns": ["127.0.0.1"]}' | sudo tee /etc/docker/daemon.json
